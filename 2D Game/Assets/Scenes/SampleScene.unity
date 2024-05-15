@@ -429,7 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861040324}
   - component: {fileID: 861040323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Scrolling background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
