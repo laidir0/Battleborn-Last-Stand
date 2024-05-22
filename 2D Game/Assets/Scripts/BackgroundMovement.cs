@@ -12,7 +12,7 @@ public class BackgroundMovement : MonoBehaviour
     {
         transform.Translate(-(backgroundSpeed * Time.deltaTime), 0, 0); // changes the X position in the Transform component
 
-        if (transform.position.x <= -16.89)
+        if (transform.position.x <= -17.89)
         {
             transform.Translate((float)17.6, 0, 0);
         }
