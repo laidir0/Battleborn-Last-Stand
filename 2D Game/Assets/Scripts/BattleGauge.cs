@@ -19,5 +19,25 @@ public class BattleGauge : MonoBehaviour
     {
         gauge -= depleteSpeed * Time.deltaTime;
         battleGauge.fillAmount = gauge / MaxGauge;
+        Debug.Log(gauge);
+
+        if (gauge <= 0)
+        {
+            Debug.Log("Game Over");
+        }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // CONDITION:
+        // "If the object we collided with is on the layer..."
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            gauge = gauge - 5;
+            Debug.Log("Collide");
+        }
+    }
+
+    
+    
 }
