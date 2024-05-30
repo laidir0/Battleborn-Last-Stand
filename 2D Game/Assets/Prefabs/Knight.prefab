@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 913941859813761481}
   - component: {fileID: 7049972962176808617}
   - component: {fileID: 7584504532227279688}
-  - component: {fileID: 7880243335373292517}
   - component: {fileID: 8015390090641929906}
   - component: {fileID: 66137929428938630}
   m_Layer: 3
@@ -34,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7049972962176808617
 SpriteRenderer:
@@ -109,22 +108,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7880243335373292517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5214006830459777677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bbdb930918d9e84dbaa65ee1e94effd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  battleGauge: {fileID: 0}
-  gauge: 100
-  MaxGauge: 100
-  depleteSpeed: 5
 --- !u!50 &8015390090641929906
 Rigidbody2D:
   serializedVersion: 4
