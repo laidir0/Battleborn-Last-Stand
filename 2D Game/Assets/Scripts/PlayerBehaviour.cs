@@ -26,18 +26,17 @@ public class PlayerBehaviour : MonoBehaviour
     {
         gauge -= depleteSpeed * Time.deltaTime;
         battleGauge.fillAmount = gauge / MaxGauge;
+        weapon = GameObject.Find("Projectile(Clone)"); // searches for a specific game object
 
         if (gauge <= 0)
         {
             // lose condition here
         }
-
         if (Input.GetButtonDown("Fire1"))
         {
             Attack();
         }
 
-        weapon = GameObject.Find("Projectile(Clone)"); // searches for a specific game object
 
     }
 
