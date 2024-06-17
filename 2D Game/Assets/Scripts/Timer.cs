@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class Timer : MonoBehaviour
 {
 
@@ -19,7 +21,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            // condition here, probably change to win scene
+            SceneManager.LoadScene(3);
         }
 
         DisplayTime(timeValue);

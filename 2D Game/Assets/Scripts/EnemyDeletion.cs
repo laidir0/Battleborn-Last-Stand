@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyDeletion : MonoBehaviour
 {
     private GameObject enemy;
+    [SerializeField]
+    AudioSource swordClash;
     private void Update()
     {
         enemy = GameObject.Find("Enemy(Clone)"); // searches for a specific game object
@@ -24,6 +26,7 @@ public class EnemyDeletion : MonoBehaviour
         {
             Destroy(enemy);
             Debug.Log("Has hit weapon");
+            swordClash.Play();
         }
     }
 }

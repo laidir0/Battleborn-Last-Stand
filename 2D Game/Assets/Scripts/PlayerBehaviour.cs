@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -14,6 +16,9 @@ public class PlayerBehaviour : MonoBehaviour
     float gauge, MaxGauge;
     [SerializeField]
     float depleteSpeed = 5;
+    [SerializeField]
+    AudioSource depleteSound;
+    
 
 
     private void Start()
@@ -30,7 +35,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (gauge <= 0)
         {
-            // lose condition here
+            SceneManager.LoadScene(2);
         }
         if (Input.GetButtonDown("Fire1"))
         {
@@ -46,7 +51,8 @@ public class PlayerBehaviour : MonoBehaviour
         // If the Enemy tag has collided with the player
         if (collision.gameObject.tag == ("Enemy"))
         {
-            gauge = gauge - 5;
+            gauge = gauge - 25;
+            depleteSound.Play();
         }
 
 
@@ -61,8 +67,9 @@ public class PlayerBehaviour : MonoBehaviour
         clonedAttack = Instantiate(attackPrefab);
 
         // Position the projectile next to the player
-        clonedAttack.transform.Translate(3, 2, 0);        
+        clonedAttack.transform.Translate(3, 2, 0);
 
+        gauge = gauge + 15;
            
 
     }
