@@ -18,7 +18,10 @@ public class PlayerBehaviour : MonoBehaviour
     float depleteSpeed = 5;
     [SerializeField]
     AudioSource depleteSound;
-    
+    [SerializeField]
+    AudioSource clashSound;
+
+
 
 
     private void Start()
@@ -53,6 +56,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             gauge = gauge - 25;
             depleteSound.Play();
+            clashSound.Play();
         }
 
 
@@ -69,7 +73,7 @@ public class PlayerBehaviour : MonoBehaviour
         // Position the projectile next to the player
         clonedAttack.transform.Translate(3, 2, 0);
 
-        gauge = gauge + 15;
+        gauge = gauge + 5;
            
 
     }
@@ -80,6 +84,7 @@ public class PlayerBehaviour : MonoBehaviour
             yield return new WaitForSeconds(1); //wait 1 seconds
             Destroy(weapon);
         }
+
     }
 
 }

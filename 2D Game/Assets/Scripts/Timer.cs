@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
 
-    [SerializeField] float timeValue = 90;
+    [SerializeField] float timeValue = 60;
     public TextMeshProUGUI timeText;
     
 
