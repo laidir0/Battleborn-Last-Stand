@@ -20,6 +20,7 @@ public class PlayerBehaviour : MonoBehaviour
     AudioSource depleteSound;
     [SerializeField]
     AudioSource clashSound;
+    private Animator animator;
 
 
 
@@ -27,6 +28,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Countdown()); // Run this function on start
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -74,7 +76,7 @@ public class PlayerBehaviour : MonoBehaviour
         clonedAttack.transform.Translate(3, 2, 0);
 
         gauge = gauge + 5;
-           
+        animator.Play("attackWithSword");
 
     }
     private IEnumerator Countdown()
@@ -83,6 +85,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             yield return new WaitForSeconds(1); //wait 1 seconds
             Destroy(weapon);
+            animator.Play("runWithSword");
         }
 
     }
